@@ -5,7 +5,7 @@ FROM collelog/buildenv:alpine3.13 AS test2
 WORKDIR /build
 
 # final image
-FROM alpine:3.12.3 
+FROM arm32v7/alpine:3.13
 LABEL maintainer "collelog <collelog.cavamin@gmail.com>"
 
 COPY --from=test2 /build /
