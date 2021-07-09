@@ -11,5 +11,7 @@ LABEL maintainer "collelog <collelog.cavamin@gmail.com>"
 #COPY --from=test2 /build /
 
 RUN set -eux && \
-	apk upgrade --no-cache --update-cache
-
+	apk upgrade --no-cache --update-cache && \
+	apk add --no-cache --update-cache \
+		curl \
+		tzdata
